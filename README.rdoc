@@ -1,6 +1,6 @@
-=Till Seek (Sinatra App)
-This is a simple Sinatra app that enables users to search for bacon using the
-Facebook Graph API.
+=BaconSeek (Sinatra App)
+This is a simple Sinatra app that enables users to search for bacon and stuff
+using the Facebook Graph API.
 
 =Running
 You need at least ruby 1.8.7 (rvm install 1.8.7). 1.9.2 should be fine though

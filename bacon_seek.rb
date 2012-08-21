@@ -3,7 +3,7 @@ require 'sinatra'
 require 'json'
 require 'koala'
 
-class TillSeek < Sinatra::Base
+class BaconSeek < Sinatra::Base
   set :static, true
   set :public, 'public'
   set :views,  'views'

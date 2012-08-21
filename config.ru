@@ -1,3 +1,3 @@
-require File.join(File.dirname(__FILE__), 'tillseek')
+require File.join(File.dirname(__FILE__), 'bacon_seek')
 
-run TillSeek.new
+run BaconSeek.new
