@@ -836,3 +836,8 @@ i[class^="icon-"]{opacity:0.8;}
 .show{display:block;}
 .invisible{visibility:hidden;}
 .affix{position:fixed;}
+.spy-row {
+    border-bottom: #ddd solid 1px;
+    padding: 30px 20px 60px 20px;
+    clear: both;
+}

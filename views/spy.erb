@@ -1,7 +1,22 @@
-
-<% @fb_object.keys.each do |key| %>
 <div>
-  <span><%= key %>: </span><span><%= @fb_object[key] %></span>
-</div>
+  <strong><div class="span3">Name: </div></strong>
+  <div class="span7 offset2"><a href="<%= "#{@links['fb_page']}" %>"><%= @links["name"] %></a></div>
+</div><br /><br />
+
+<div>
+  <img src="<%= "#{@links['avatar']}" %>" class="img-rounded">
+</div><br /><br />
+
+<div>
+  <strong><div class="span3">Website: </div></strong>
+  <div class="span7 offset2"><a href="<%= "#{@links['website']}" %>"><%= @links["website"] %></a></div>
+</div><br /><br />
+
+
+<% @item.keys.each do |key| %>
+<div>
+  <strong><div class="span3"><%= key %>: </div></strong>
+  <div class="span7 offset2"><%= @item[key] %></div>
+</div><br /><br />
 <% end %>
 
