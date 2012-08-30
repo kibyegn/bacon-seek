@@ -1,22 +1,18 @@
-<div>
-  <strong><div class="span3">Name: </div></strong>
-  <div class="span7 offset2"><a href="<%= "#{@links['fb_page']}" %>"><%= @links["name"] %></a></div>
-</div><br /><br />
+<ul class="thumbnails">
+  <li class="span8">
+    <a href="<%= "#{@links['website']}" %>" class="thumbnail">
+      <img src="<%= "#{@links['avatar']}" %>" alt="">
+    </a>
+  </li>
+</ul>
 
-<div>
-  <img src="<%= "#{@links['avatar']}" %>" class="img-rounded">
-</div><br /><br />
-
-<div>
-  <strong><div class="span3">Website: </div></strong>
-  <div class="span7 offset2"><a href="<%= "#{@links['website']}" %>"><%= @links["website"] %></a></div>
-</div><br /><br />
-
+<dl class="dl-horizontal">
+  <dt>Name</dt>
+  <dd><a href="<%= "#{@links['fb_page']}" %>"><%= @links["name"] %></a></dd><br />
 
 <% @item.keys.each do |key| %>
-<div>
-  <strong><div class="span3"><%= key %>: </div></strong>
-  <div class="span7 offset2"><%= @item[key] %></div>
-</div><br /><br />
+  <dt><%= key %></dt>
+  <dd><%= @item[key] %></dd><br />
 <% end %>
+</dl>
 

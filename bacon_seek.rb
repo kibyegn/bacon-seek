@@ -53,14 +53,14 @@ class BaconSeek < Sinatra::Base
 
   def strip_redundants(item)
     item.reject! {|k, v| %w"id name link website cover is_published".include? k }
-    item.keys.each do |key|
+    new_item_hash = item.inject({}) do |new_hash, (key, value)|
+      old_key = key
       new_key = key.gsub(/^([a-z])/) { $1.capitalize }
-      new_key = key.gsub('_', ' ')
-      item[new_key] = item[key]
-      item.delete(key)
+      new_key = new_key.gsub('_', ' ')
+      new_hash[new_key] = item[old_key]
+      new_hash
     end
-
-    item
+    new_item_hash
   end
 
   def get_links(item)
